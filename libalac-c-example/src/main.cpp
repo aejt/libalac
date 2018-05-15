@@ -115,7 +115,7 @@ int main()
 		std::cout << "Encoding succeeded (" << ioNumBytes << " bytes)" << std::endl;
 	else
 		std::cout << "Decoding failed with error " << encode_status << "!" << std::endl;
-	//encoded_buffer.resize(ioSize); <-- Tried both with and without this; the converter example seems to let this stay at the max encoded buffer size.
+	encoded_buffer.resize(ioNumBytes); //<-- Tried both with and without this; the converter example seems to let this stay at the max encoded buffer size.
 
 	// Get cookie from encoder
 	uint32_t cookie_size = ALACEncoder_GetMagicCookieSize(encoder, CHANNELS);
