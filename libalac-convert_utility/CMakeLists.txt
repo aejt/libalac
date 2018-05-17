@@ -4,16 +4,16 @@
 cmake_minimum_required (VERSION 3.8)
 
 # Add source to this project's executable.
-add_executable (libalac-convert-utility src/main.cpp src/CAFFileALAC.cpp)
+add_executable (alac-convert-utility src/main.cpp src/CAFFileALAC.cpp)
 
 # OS Specifics
 if (WIN32)
-	target_compile_definitions(libalac-convert-utility PRIVATE TARGET_OS_WIN32)
+	target_compile_definitions(alac-convert-utility PRIVATE TARGET_OS_WIN32)
 endif (WIN32)
 
-target_link_libraries(libalac-convert-utility libalac)
+target_link_libraries(alac-convert-utility alac)
 
-target_include_directories(libalac-convert-utility
+target_include_directories(alac-convert-utility
     PUBLIC 
         $<INSTALL_INTERFACE:include>    
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>

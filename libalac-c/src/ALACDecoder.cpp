@@ -14,7 +14,7 @@
 * limitations under the License.
 */
 
-#include "libalac/ALACDecoder.h"
+#include "alac/ALACDecoder.h"
 
 #ifdef __cplusplus
 extern "C" {

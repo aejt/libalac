@@ -4,11 +4,11 @@
 cmake_minimum_required (VERSION 3.8)
 
 # Add source to this project's executable.
-add_executable (libalac_example src/main.cpp)
+add_executable (alac_c_example src/main.cpp)
 
-target_link_libraries(libalac_example
+target_link_libraries(alac_c_example
     PUBLIC 
-        libalac_c
+        alac_c
     PRIVATE
         
 )

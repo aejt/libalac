@@ -23,9 +23,9 @@
 #include <string.h>
 
 // these are headers for the ALAC encoder and decoder
-#include "libalac/ALACEncoder.h"
-#include "libalac/ALACDecoder.h"
-#include "libalac/ALACBitUtilities.h"
+#include "alac/ALACEncoder.h"
+#include "alac/ALACDecoder.h"
+#include "alac/ALACBitUtilities.h"
 
 // these are utility headers for this sample code
 #include "CAFFileALAC.h"

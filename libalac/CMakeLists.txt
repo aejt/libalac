@@ -9,18 +9,20 @@ set(ALAC_CPP_SRC src/ALACEncoder.cpp src/ALACDecoder.cpp)
 # Compile C files as C++
 set_source_files_properties(${ALAC_C_SRC} PROPERTIES LANGUAGE CXX )
 
-add_library (libalac ${ALAC_CPP_SRC} ${ALAC_C_SRC})
+add_library (alac ${ALAC_CPP_SRC} ${ALAC_C_SRC})
 
 if (WIN32)
-	target_compile_definitions(libalac PRIVATE TARGET_OS_WIN32)
+	target_compile_definitions(alac PRIVATE TARGET_OS_WIN32)
 endif (WIN32)
 
-target_include_directories(libalac 
+target_include_directories(alac 
     PUBLIC 
 	INTERFACE
         $<INSTALL_INTERFACE:include>    
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>		
     PRIVATE
-        ${CMAKE_CURRENT_SOURCE_DIR}/include/libalac
+        ${CMAKE_CURRENT_SOURCE_DIR}/include/alac
         ${CMAKE_CURRENT_SOURCE_DIR}/src
 )
+
+install(TARGETS alac DESTINATION bin)

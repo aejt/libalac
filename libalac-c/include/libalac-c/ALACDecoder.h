@@ -17,8 +17,8 @@
 #ifndef __ALACDECODER_H
 #define __ALACDECODER_H
 
-#include "libalac/ALACBitUtilities.h"
-#include "libalac/ALACAudioTypes.h"
+#include "alac/ALACBitUtilities.h"
+#include "alac/ALACAudioTypes.h"
 
 #ifdef __cplusplus
 extern "C" {
